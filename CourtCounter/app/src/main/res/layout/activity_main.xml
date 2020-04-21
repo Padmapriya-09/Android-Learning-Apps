@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/text_view_Team_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:textAllCaps="true"
+                android:text="Team_A" />
+            <TextView
+                android:id="@+id/text_view_score_Team_A"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_Team_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:text="0"/>
+            <Button
+                app:layout_constraintTop_toBottomOf="@+id/text_view_score_Team_A"
+                android:id="@+id/button_3points_Team_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="threePointsForA"
+                android:text="+3 points"/>
+            <Button
+                app:layout_constraintTop_toBottomOf="@+id/button_3points_Team_A"
+                android:id="@+id/button_2points_Team_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="twoPointsForA"
+                android:text="+2 points"/>
+            <Button
+                app:layout_constraintTop_toBottomOf="@+id/button_2points_Team_A"
+                android:id="@+id/button_freethrow_Team_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="freeThrowForA"
+                android:text="free throw"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="250dp"
+            android:background="@android:color/darker_gray"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/text_view_Team_B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:textAllCaps="true"
+                android:text="Team_B" />
+            <TextView
+                android:id="@+id/text_view_score_Team_B"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_Team_B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:text="0"/>
+            <Button
+                app:layout_constraintTop_toBottomOf="@+id/text_view_score_Team_B"
+                android:id="@+id/button_3points_Team_B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="threePointsForB"
+                android:text="+3 points"/>
+            <Button
+                app:layout_constraintTop_toBottomOf="@+id/button_3points_Team_B"
+                android:id="@+id/button_2points_Team_B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="twoPointsForB"
+                android:text="+2 points"/>
+            <Button
+                app:layout_constraintTop_toBottomOf="@+id/button_2points_Team_B"
+                android:id="@+id/button_freethrow_Team_B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="freeThrowForB"
+                android:text="free throw"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        android:gravity="center_horizontal"
+        android:id="@+id/button_reset"
+        android:onClick="resetGame"/>
+</LinearLayout>
